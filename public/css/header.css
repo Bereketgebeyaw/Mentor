@@ -1,4 +1,5 @@
 /* General Header Styling */
+
 header {
   background-color: #f7f7f7; /* Lighter background color */
   padding: 10px 20px;
@@ -14,6 +15,8 @@ header {
   border: 1px solid #f7f7f7; /* Subtle border */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+
 
 /* Header Container */
 .header-container {
@@ -55,6 +58,9 @@ header {
   align-items: center;
   margin-left: auto; /* Align nav links to the right */
 }
+.nav-links a:hover {
+  color: goldenrod;
+}
 
 .nav-links li {
   position: relative;
@@ -68,14 +74,14 @@ header {
   transition: color 0.3s ease-in-out;
 }
 
-.nav-links a:hover {
-  color: #333;
-}
 
 /* Active Link Styling */
-.nav-links a.active {
+.nav-links a:hover {
   color: #d9a23e; /* Highlight color */
   font-weight: bold;
+}
+.nav-links  a:is(:link , :active , :visited).active{
+    color: #d9a23e;
 }
 
 /* Hamburger Icon Styling */
@@ -122,6 +128,39 @@ header {
     z-index: 20; /* Ensure it's above other elements */
   }
 }
+/* drop down */
+
+.b li {
+  display: inline-block;
+  position: relative;
+  
+}
+.b li ul.dropdown li  {
+  display: block;
+  padding: 7px 5px;
+  
+
+  
+}
+.b li ul.dropdown li {
+  display: block;
+}
+.b li:hover ul.dropdown {
+  display: block;
+}
+.b li ul.dropdown {
+  width: 100%;
+  background: black;
+  position: absolute;
+  display: none;
+  text-align: left;
+}
+.b li ul.dropdown li a {
+  color: white;
+}
+.b li ul.dropdown li a:hover {
+  color:goldenrod;
+}
 
 @media screen and (max-width: 480px) {
   /* Smaller logo and text for very small screens */
@@ -136,4 +175,5 @@ header {
   .nav-links a {
     font-size: 0.7rem; /* Reduce link font size */
   }
+  
 }
