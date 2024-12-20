@@ -124,8 +124,9 @@ body {
 }
 
 .mission-section {
-  background-color: #002C2B; 
-  color: #FFFFFF; 
+ background-color: #333; /* Choose your preferred color */
+    color: white; /* Text color for contrast */
+    font-family: Arial, sans-serif; /* Font style */
   padding: 60px 20px; 
   position: relative;
   overflow: hidden; 
