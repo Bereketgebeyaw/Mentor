@@ -9,8 +9,8 @@ body {
 
 /* Contact card styling */
 .contact-container {
-    max-width: 600px;
-    margin: 50px auto;
+    max-width: 700px;
+    margin: 100px auto;
     padding: 20px;
     background-color: #eeeeee; /* Light gray background for the card */
     border-radius: 8px;

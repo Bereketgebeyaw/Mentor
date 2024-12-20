@@ -26,7 +26,7 @@ header {
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  padding: 0 20px; /* Add padding for better spacing */
+  padding: 0 10px; /* Add padding for better spacing */
   width: 100%; /* Ensure full width */
 }
 
@@ -37,7 +37,7 @@ header {
 }
 
 .logo-img {
-  height: 40px; /* Larger logo size */
+  height: 70px; /* Larger logo size */
   width: auto;
   margin-right: 10px;
 }
@@ -54,7 +54,7 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 15px; /* Add space between links */
+  gap: 35px; /* Add space between links */
   align-items: center;
   margin-left: auto; /* Align nav links to the right */
 }
@@ -74,6 +74,9 @@ header {
   transition: color 0.3s ease-in-out;
 }
 
+.nav-links a:hover {
+  color: goldenrod;
+}
 
 /* Active Link Styling */
 .nav-links a:hover {
@@ -130,36 +133,37 @@ header {
 }
 /* drop down */
 
-.b li {
+.nav-dropdown li {
   display: inline-block;
   position: relative;
   
 }
-.b li ul.dropdown li  {
+.nav-dropdown li ul.dropdown li  {
   display: block;
-  padding: 7px 5px;
+  padding: 4px 5px;
   
 
   
 }
-.b li ul.dropdown li {
+.nav-dropdown li ul.dropdown li {
   display: block;
 }
-.b li:hover ul.dropdown {
+.nav-dropdown li:hover ul.dropdown {
   display: block;
 }
-.b li ul.dropdown {
+.nav-dropdown li ul.dropdown {
   width: 100%;
-  background: black;
+  background: whitesmoke;
   position: absolute;
   display: none;
   text-align: left;
 }
-.b li ul.dropdown li a {
-  color: white;
+.nav-dropdown li ul.dropdown li a {
+  color: black;
 }
-.b li ul.dropdown li a:hover {
+.nav-dropdown li ul.dropdown li a:hover {
   color:goldenrod;
+  
 }
 
 @media screen and (max-width: 480px) {
@@ -174,6 +178,7 @@ header {
 
   .nav-links a {
     font-size: 0.7rem; /* Reduce link font size */
+    
   }
   
 }
