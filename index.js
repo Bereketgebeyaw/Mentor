@@ -155,13 +155,17 @@ app.post('/apply/:jobId', async (req, res) => {
 app.get("/our_products", (req, res) => {
   res.render("our_products", { title: "Our products" });
 });
-app.get("/contact", (req, res) => {
-  res.render("contact", { title: "contact us" });
-});
+
 
 
 app.get('/request-service', (req, res) => {
     res.render('request', { title: 'Request a Service' });
+});
+app.get("/contact", (req, res) => {
+  res.render("contact", { title: "contact us" });
+});
+app.get("/services", (req, res) => {
+  res.render("services", { title: "services" });
 });
 
 

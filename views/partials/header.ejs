@@ -5,21 +5,45 @@
   <div class="header-container">
     <!-- Logo Section -->
     <div class="logo">
-      <img src="/images/logo.jpeg" alt="Logo" class="logo-img" />
+      <img src="/images/logo1.png" alt="Logo" class="logo-img" />
       <h1 class="logo-text">MENTOR</h1>
     </div>
 
     <!-- Hamburger Icon -->
-    <div class="hamburger" id="hamburger">
-      &#9776;
-    </div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
 
     <!-- Navigation Links -->
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
       <li><a href="/about">About</a></li>
-      <li><a href="/services">Services</a></li>
-      <li><a href="/our_products">Our Products</a></li>
+      <ul class="nav-dropdown">
+        <li>
+          <a href="/services">Our Services <i class="fas fa-angle-down"> </i>&nbsp;&nbsp;</a>
+          <ul class="dropdown">
+            <li><a href="/services#service1">Management Consultancy</a></li>
+            <li><a href="/services#service2">Workshops, seminars and Trainings</a></li>
+            <li><a href="/services#service3">Automation Service</a></li>
+
+            
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav-dropdown">
+        <li>
+          <a href="/our_products">Our products <i class="fas fa-angle-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="our_products#product1">COMee</a></li>
+            <li><a href="our_products#product2">CATS</a></li>
+            <li><a href="our_products#product3">eCom</a></li>
+            <li><a href="our_products#product4">eFom</a></li>
+            <li><a href="our_products#product5">Data Outsourcing</a></li>
+            <li><a href="our_products#product6">SIS</a></li>
+            <li><a href="our_products#product7">ImCare</a></li>
+          </ul>
+        </li>
+      </ul>
+
       <li><a href="/testimonials">Testimonials</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
@@ -27,21 +51,22 @@
 </header>
 
 <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const currentLocation = window.location.pathname === '/' ? '/' : window.location.pathname;
-    const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener("DOMContentLoaded", () => {
+    const currentLocation =
+      window.location.pathname === "/" ? "/" : window.location.pathname;
+    const navLinks = document.querySelectorAll(".nav-links a");
 
-    navLinks.forEach(link => {
-      if (link.getAttribute('href') === currentLocation) {
-        link.classList.add('active');
+    navLinks.forEach((link) => {
+      if (link.getAttribute("href") === currentLocation) {
+        link.classList.add("active");
       }
     });
 
     // Toggle navigation menu
-    const hamburger = document.getElementById('hamburger');
-    const navLinksMenu = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      navLinksMenu.classList.toggle('active');
+    const hamburger = document.getElementById("hamburger");
+    const navLinksMenu = document.getElementById("navLinks");
+    hamburger.addEventListener("click", () => {
+      navLinksMenu.classList.toggle("active");
     });
   });
 </script>

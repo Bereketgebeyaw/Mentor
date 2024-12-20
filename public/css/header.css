@@ -23,7 +23,7 @@ header {
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  padding: 0 20px; /* Add padding for better spacing */
+  padding: 0 10px; /* Add padding for better spacing */
   width: 100%; /* Ensure full width */
 }
 
@@ -34,7 +34,7 @@ header {
 }
 
 .logo-img {
-  height: 40px; /* Larger logo size */
+  height: 70px; /* Larger logo size */
   width: auto;
   margin-right: 10px;
 }
@@ -51,7 +51,7 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 15px; /* Add space between links */
+  gap: 35px; /* Add space between links */
   align-items: center;
   margin-left: auto; /* Align nav links to the right */
 }
@@ -69,7 +69,7 @@ header {
 }
 
 .nav-links a:hover {
-  color: #333;
+  color: goldenrod;
 }
 
 /* Active Link Styling */
@@ -122,6 +122,40 @@ header {
     z-index: 20; /* Ensure it's above other elements */
   }
 }
+/* drop down */
+
+.nav-dropdown li {
+  display: inline-block;
+  position: relative;
+  
+}
+.nav-dropdown li ul.dropdown li  {
+  display: block;
+  padding: 4px 5px;
+  
+
+  
+}
+.nav-dropdown li ul.dropdown li {
+  display: block;
+}
+.nav-dropdown li:hover ul.dropdown {
+  display: block;
+}
+.nav-dropdown li ul.dropdown {
+  width: 100%;
+  background: whitesmoke;
+  position: absolute;
+  display: none;
+  text-align: left;
+}
+.nav-dropdown li ul.dropdown li a {
+  color: black;
+}
+.nav-dropdown li ul.dropdown li a:hover {
+  color:goldenrod;
+  
+}
 
 @media screen and (max-width: 480px) {
   /* Smaller logo and text for very small screens */
@@ -135,5 +169,6 @@ header {
 
   .nav-links a {
     font-size: 0.7rem; /* Reduce link font size */
+    
   }
 }
