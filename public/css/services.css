@@ -11,6 +11,30 @@ main {
 }
 
 
+.cta-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #d9a23e; 
+  color: #FFFFFF; 
+  text-decoration: none; 
+  font-size: 1.1rem; 
+  font-weight: bold;
+  border: 2px solid #d9a23e; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease;
+  
+}
+
+.cta-button:hover {
+  background-color: #d9a23e; 
+  color: #000; 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
+  transform: scale(1.05); 
+}
+.button-cta{
+  padding-left: 1000px;
+}
 
 .our-technology {
     display: flex;
@@ -163,3 +187,4 @@ main {
     width: 100%; /* Each card takes full width */
   }
 }
+

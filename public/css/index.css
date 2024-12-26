@@ -7,18 +7,7 @@ body {
 }
 
 
-.welcome-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; 
-  background-color: #F5F2EF; 
-  padding: 40px; 
-  background-image: none; 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; 
-}
+
 
 .welcome-container {
   display: flex;
@@ -27,7 +16,6 @@ body {
   width: 100%;
   max-width: 1200px; 
 }
-
 
 .welcome-text {
   flex: 1;
@@ -40,13 +28,14 @@ body {
   font-size: 3rem;
   font-weight: 500;
   line-height: 1.2;
+  color:#f4f4f4;
   margin-bottom: 20px;
 }
 
 .welcome-text p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #555;
+  color:white;
   margin-bottom: 30px;
 }
 
@@ -92,26 +81,6 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow for polish */
 }
 
-.cta-button {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: #d9a23e; 
-  color: #FFFFFF; 
-  text-decoration: none; 
-  font-size: 1.1rem; 
-  font-weight: bold;
-  border: 2px solid #d9a23e; 
-  border-radius: 8px; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #d9a23e; 
-  color: #000; 
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
-  transform: scale(1.05); 
-}
 
 .welcome-text, .welcome-image {
   background-color: rgba(255, 255, 255, 0); 
@@ -167,6 +136,10 @@ body {
   max-width: 800px;
   margin: 0 auto; 
   text-align: left; 
+}
+.mission-content span:hover{
+  background-color: yellow;
+  color: #000;
 }
 
 .mission-label {
@@ -236,7 +209,7 @@ body {
     max-width: 100%; /* Full width for both containers */
     margin: 0;
   }
-
+.read-more
   .welcome-image {
     margin-top: 30px; /* Add space between stacked elements */
   }
@@ -347,7 +320,6 @@ body {
   transform: translateY(-10px);
   box-shadow: 0 8px 15px rgba(217, 162, 62, 0.3); /* Golden yellow shadow */
 }
-
 .vision-mission-card h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
@@ -432,6 +404,8 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
+
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 15px rgba(217, 162, 62, 0.3); /* Golden yellow shadow */
@@ -458,7 +432,7 @@ body {
   color: #333; /* Dark text */
 }
 
-.service-card .read-more {
+.service-card .read-more-1 {
   display: inline-block;
   padding: 8px 20px;
   font-size: 0.9rem;
@@ -467,6 +441,28 @@ body {
   border-radius: 4px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  margin-top: 30px;
+}
+.service-card .read-more-2 {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  color: #ffffff; /* White text */
+  background-color: #d9a23e; /* Golden yellow button */
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.service-card .read-more-3 {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  color: #ffffff; /* White text */
+  background-color: #d9a23e; /* Golden yellow button */
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 60px;
 }
 
 .service-card .read-more:hover {
@@ -592,4 +588,245 @@ body {
     font-size: 0.9rem;
     padding: 10px 18px;
   }
+
+
+  
+}
+
+ 
+.section-scroll-down{
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.scroll-down {
+  height: 50px;
+  width: 30px;
+  border: 2px solid black;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 2px solid black;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::before {
+  top: 30%;
+  animation-delay: 0.3s;
+  /* animation: scroll-down 1s ease-in-out infinite; */
+}
+
+@keyframes scroll-down {
+  0% {
+    /* top:20%; */
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+.carousel-item {
+  position: relative;
+}
+.carousel-item img {
+  filter: brightness(0.5); /* Adjust the value for more or less darkness */
+  width: 100%;
+  height: 650px;
+}
+.carousel-container {
+  position: absolute;
+  left: 150px; /* Adjust left spacing */
+  margin-right: 600px;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+ 
+  text-align: left; /* Align text to the left */
+  overflow: hidden; /* Hide overflow during animation */
+  
+}
+.title {
+  opacity: 0; /* Start hidden */
+  transform: translateY(-20px); /* Start above */
+  color: #FFF;
+  font-family: bold;
+  font-weight:bold;
+  transition: opacity 1s ease, transform 2s ease; /* Animation effect */
+  
+}
+.description {
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start below */
+  color: gold;
+  transition: opacity 0.5s ease, transform 2s ease; /* Animation effect */
+}
+.carousel-item.active .title {
+  opacity: 1; /* Show active title */
+  transform: translateY(0); /* Slide down to original position */
+}
+.carousel-item.active .description {
+  opacity: 1; /* Show active description */
+  transform: translateY(0); /* Slide up to original position */
+}
+
+
+/* about */
+.mission-section {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.8), rgba(0, 0, 0, 0.9)); /* Golden to dark gradient */
+  color: #fff; /* White text */
+  padding: 50px 20px;
+  text-align: left;
+  position: relative;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease; /* Fade-in effect */
+}
+.mission-content {
+  max-width: 600px;
+  padding: 20px;
+  margin-left: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Dark background for content */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%); /* Start off-screen to the right */
+  transition: transform 1s ease; /* Slide-in effect */
+}
+.mission-label {
+  display: block;
+  font-size: 1.5em; /* Increased font size */
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffd700; /* Golden color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow */
+}
+.mission-label a {
+  color: #ffd700; /* Golden link color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.mission-label a:hover {
+  color: #ffffff; /* Change to white on hover */
+}
+.mission-text {
+  font-size: 1.6em; /* Increased font size */
+  line-height: 1.8; /* Improved line height */
+  margin-top: 20px;
+  color: #fff; /* White text */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow */
+}
+.mission-image {
+  flex: 1;
+  max-width: 500px; /* Set max width for the image */
+  margin-right: 20px;
+  padding-left: 100px;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100%); /* Start off-screen to the left */
+  transition: opacity 1s ease, transform 1s ease; /* Fade and slide in */
+}
+.mission-image img {
+  width: 100%; /* Make image responsive */
+  height: 500px; /* Fixed height */
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+  .mission-text {
+      font-size: 1.4em; /* Adjusted for smaller screens */
+  }
+  .mission-label {
+      font-size: 1.2em; /* Adjusted for smaller screens */
+  }
+  .mission-section {
+      flex-direction: column; /* Stack on smaller screens */
+      align-items: center;
+  }
+  .mission-content {
+      margin-left: 0;
+      margin-top: 20px;
+  }
+  .mission-image {
+      max-width: 100%; /* Full width on small screens */
+      margin-right: 0;
+      height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* our servive */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light background for the whole page */
+}
+.services-solutions-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  text-align: center;
+  opacity: 0; /* Start hidden */
+  visibility: hidden; /* Prevent interaction when hidden */
+  transition: opacity 1s ease-in; /* Fade-in effect */
+}
+.service-cards {
+  display: flex;
+  justify-content: space-between; /* Space between cards */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  max-width: 1000px; /* Max width for the container */
+  margin: 0 auto; /* Center the container */
+}
+.service-card {
+  background: #f9f9f9; /* Match the section background color */
+  border: none; /* No border */
+  border-radius: 10px;
+  box-shadow: none; /* No shadow */
+  margin: 20px; /* Margin around each card */
+  padding: 20px;
+  text-align: left;
+  width: 300px; /* Fixed width for cards */
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start lower */
+  transition: opacity 1s ease-in, transform 1s ease-in; /* Fade-in and slide effect */
+}
+.service-image {
+  width: 100%; /* Full width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-bottom: 15px; /* Space below the image */
+  opacity: 0; /* Start hidden */
+  transform: translateX(-50px); /* Start from the left */
+  transition: opacity 1s ease-in, transform 1s ease-in; /* Fade-in and slide effect */
+}
+.service-category {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px; /* Space below category */
+  opacity: 0; /* Start hidden */
+  transform: translateX(50px); /* Start from the right */
+  transition: opacity 1s ease-in, transform 1s ease-in; /* Fade-in and slide effect */
 }

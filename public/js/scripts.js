@@ -19,3 +19,15 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+
+
+// Function to show the vision section after a delay
+setTimeout(function() {
+  const visionSection = document.getElementById('visions');
+  visionSection.classList.add('visible'); // Add visible class to trigger animation
+}, 2000); // Delay of 3000 milliseconds (3 seconds)
+
+
+
+

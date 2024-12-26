@@ -9,42 +9,103 @@
     <link rel="stylesheet" href="/css/index.css"> <!-- Link to your CSS -->
     <link rel="stylesheet" href="/css/portfolio.css"> <!-- Link to portfolio CSS -->
     <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <title><%= title %></title>
     <script src="/js/script.js"></script>
 </head>
 
 <body>
     <%- include('partials/header') %> 
-
+       
     <!-- Welcome Section -->
     <section class="welcome-section">
-        <div class="welcome-container">
-            <!-- Text Section on the Left -->
-            <div class="welcome-text">
-                <!-- Hero Section (Direct Content) -->
-                <section class="hero-section">
-                    <h1 class="main-title">Mentor: Empowering Innovation, Transforming Knowledge into Success</h1>
-                    <p class="subtitle">
-                        Harnessing cutting-edge technology to empower businesses for tomorrow.
-                    </p>
-                    <a href="/request-service" class="cta-button">Get Started</a>
-                </section>
-            </div>
+        <!-- <div class="welcome-container">  -->
+            
 
-            <!-- Image Section on the Right -->
-            <div class="welcome-image">
-                <img src="/images/welcome-image.jpeg" alt="Welcome to Mentor" />
-            </div>
+            <section id="coffee-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+              <div class="carousel-inner">
+          
+                  <div class="carousel-item active">
+                      <img src="/images/welcome-image.jpg" >
+                      <div class="carousel-container">
+                          <h1 class="title">Mentor: Empowering Innovation, Transforming Knowledge into Success</h1>
+                          <p class="description">Harnessing cutting-edge technology to empower businesses for tomorrow.</p>
+                      </div>
+                  </div>
+          
+                  <div class="carousel-item">
+                      <img src="/images/new.jpeg" >
+                      <div class="carousel-container">
+                        <h1 class="title">Mentor: Empowering Innovation, Transforming Knowledge into Success</h1>
+                        <p class="description">Harnessing cutting-edge technology to empower businesses for tomorrow.</p>
+                      </div>
+                  </div>
+          
+                  <div class="carousel-item">
+                      <img src="/images/therm.jpg">
+                      <div class="carousel-container">
+                        <h1 class="title">Mentor: Empowering Innovation, Transforming Knowledge into Success</h1>
+                        <p class="description">Harnessing cutting-edge technology to empower businesses for tomorrow.</p>
+                      </div>
+                  </div>
+          
+                  <div class="carousel-item">
+                      <img src="/images/welcome-image.jpg" >
+                      <div class="carousel-container">
+                        <h1 class="title">Mentor: Empowering Innovation, Transforming Knowledge into Success</h1>
+                        <p class="description">Harnessing cutting-edge technology to empower businesses for tomorrow.</p>
+                      </div>
+                  </div>
+          
+                  <div class="carousel-item">
+                      <img src="/images/new.jpeg" >
+                      <div class="carousel-container">
+                        <h1 class="title">Mentor: Empowering Innovation, Transforming Knowledge into Success</h1>
+                        <p class="description">Harnessing cutting-edge technology to empower businesses for tomorrow.</p>
+                      </div>
+                  </div>
+          
+              </div>
+          
+              <button class="carousel-control-prev" type="button" data-bs-target="#coffee-carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#coffee-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+          
+              <ol class="carousel-indicators">
+                  <li data-bs-target="#coffee-carousel" data-bs-slide-to="0" class="active"></li>
+                  <li data-bs-target="#coffee-carousel" data-bs-slide-to="1"></li>
+                  <li data-bs-target="#coffee-carousel" data-bs-slide-to="2"></li>
+                  <li data-bs-target="#coffee-carousel" data-bs-slide-to="3"></li>
+                  <li data-bs-target="#coffee-carousel" data-bs-slide-to="4"></li>
+              </ol>
+          </section>
+           
+           
+        </div>
+        <div class="container" id="sec-1" class="section-scroll-down">
+          <a href="#sec-2">
+            <div class="scroll-down"></div>
+          </a>
         </div>
     </section>
+    
 
-    <section class="mission-section">
-        <div class="mission-content">
-          <span class="mission-label">About Us</span>
+    <section class="mission-section" id="missionSection">
+      <div class="mission-image">
+          <img src="/images/about-Us.jpg" alt="Mission Image">
+      </div>
+      <div class="mission-content">
+          <span class="mission-label"><a href="/about">About Us</a></span>
           <h2 class="mission-text">
-            Mentor Knowledge Solutions PLC is an IT and Management Consulting firm taking an active role in the business of making organizations perform better.</h2>
-        </div>
-      </section>
+              Mentor Knowledge Solutions PLC is an IT and Management Consulting firm taking an active role in the business of making organizations perform better.
+          </h2>
+      </div>
+  </section>
       
 
    
@@ -76,35 +137,26 @@
   </div>
 </section>
 
-
-<section class="services-solutions-section">
+<section class="services-solutions-section" id="services">
   <h2>Our Services</h2>
   <div class="service-cards">
-    <div class="service-card">
-      <i class="fa-solid fa-list-check icon"></i>
-      <p class="service-category">
-Management Consultancy
-</p>
-      <p>Mentor also involves in management consulting in the areas of service innovation and enterprise transformation through IT enablement and customer-centric capabilities.</p>
-      <a href="/services" class="read-more">Read More</a>
-    </div>
-    <div class="service-card">
-      
-      <i class="fa-regular fa-handshake icon"></i>
-      <p class="service-category">Workshops, Seminars and Trainings</p>
-      <p>Mentor offers trainings, seminars and workshops on topics selected with the intention to provide key competencies that will enable practitioners and managers enhance their capabilities.</p>
-      <a href="/services" class="read-more">Read More</a>
-    </div>
-    <div class="service-card">
-      <i class="fa-solid fa-laptop icon"></i>
-      <p class="service-category">Automation service</p>
-      <p>Mentor provides automation services aimed at optimizing business and technology processes by utilizing advanced tools and techniques.</p>
-      </p>
-      <a href="/services" class="read-more">Read More</a>
-    </div>
+      <div class="service-card">
+          <img src="/images/management-concelting.png" alt="Management Consultancy" class="service-image">
+          <p class="service-category">Management Consultancy</p>
+          <p>Mentor also involves in management consulting in the areas of service innovation and enterprise transformation through IT enablement and customer-centric capabilities.</p>
+      </div>
+      <div class="service-card">
+          <img src="/images/traininng.png" alt="Workshops" class="service-image">
+          <p class="service-category">Workshops, Seminars and Trainings</p>
+          <p>Mentor offers trainings, seminars and workshops on topics selected with the intention to provide key competencies that will enable practitioners and managers enhance their capabilities.</p>
+      </div>
+      <div class="service-card">
+          <img src="/images/Automation Service.png" alt="Automation Service" class="service-image">
+          <p class="service-category">Automation Service</p>
+          <p>Mentor provides automation services aimed at optimizing business and technology processes by utilizing advanced tools and techniques.</p>
+      </div>
   </div>
 </section>
-
 
  <!-- Portfolio Section -->
     <section id="portfolio-section" class="portfolio-section">
@@ -135,7 +187,8 @@ Management Consultancy
     </section>
 <!-- Footer Include -->
 <%- include('partials/footer') %>
-    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
