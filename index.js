@@ -155,7 +155,9 @@ app.post('/apply/:jobId', async (req, res) => {
 app.get("/our_products", (req, res) => {
   res.render("our_products", { title: "Our products" });
 });
-
+app.get("/E-commerce", (req, res) => {
+  res.render("E-commerce", { title: "E-commerce" });
+});
 
 
 app.get('/request-service', (req, res) => {
