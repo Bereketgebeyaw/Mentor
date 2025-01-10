@@ -98,7 +98,7 @@ body {
     font-family: Arial, sans-serif; /* Font style */
   padding: 60px 20px; 
   position: relative;
-  overflow: hidden; 
+  overflow-x: hidden; 
 }
 
 
@@ -115,19 +115,7 @@ body {
   z-index: 0;
 }
 
-.mission-section::after {
-  content: '';
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  width: 500px;
-  height: 500px;
-  border-top: 2px solid #d9a23e;
-  border-left: 2px solid #d9a23e;
-  transform: rotate(-45deg);
-  z-index: 0;
-  opacity: 0.6; 
-}
+
 
 
 .mission-content {
@@ -303,6 +291,7 @@ body {
   padding: 50px 20px;
   background: linear-gradient(135deg, #ffffff, #f8f9fa); /* Background gradient */
   color: #333; /* Dark text */
+  
 }
 
 .vision-mission-card {
@@ -472,7 +461,7 @@ body {
   display: flex;
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+  
 }
 
 .service-card {
@@ -569,6 +558,9 @@ body {
     max-width: 90%; /* Ensure image is responsive */
     height: auto;
   }
+  .service-cards{
+    flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+  }
 
   /* Move the welcome image below the hero section */
   .welcome-section {
@@ -654,6 +646,7 @@ body {
 }
 .carousel-item img {
   filter: brightness(0.5); /* Adjust the value for more or less darkness */
+  object-fit: cover;
   width: 100%;
   height: 650px;
 }
@@ -665,7 +658,7 @@ body {
   transform: translateY(-50%); /* Adjust for vertical centering */
  
   text-align: left; /* Align text to the left */
-  overflow: hidden; /* Hide overflow during animation */
+  overflow-x: hidden; /* Hide overflow during animation */
   
 }
 .title {
@@ -775,6 +768,10 @@ body {
       max-width: 100%; /* Full width on small screens */
       margin-right: 0;
       height: auto; /* Maintain aspect ratio */
+      display: none;
+  }
+  .carousel-container{
+    margin-left: -4rem;
   }
 }
 
@@ -795,8 +792,8 @@ body {
 }
 .service-cards {
   display: flex;
-  justify-content: space-between; /* Space between cards */
-  flex-wrap: nowrap; /* Prevent wrapping */
+ 
+  
   max-width: 1000px; /* Max width for the container */
   margin: 0 auto; /* Center the container */
 }
@@ -808,7 +805,7 @@ body {
   margin: 20px; /* Margin around each card */
   padding: 20px;
   text-align: left;
-  width: 300px; /* Fixed width for cards */
+  width: calc(33.33% - 40px); /* Three cards in a row with spacing */
   opacity: 0; /* Start hidden */
   transform: translateY(20px); /* Start lower */
   transition: opacity 1s ease-in, transform 1s ease-in; /* Fade-in and slide effect */
@@ -830,3 +827,20 @@ body {
   transform: translateX(50px); /* Start from the right */
   transition: opacity 1s ease-in, transform 1s ease-in; /* Fade-in and slide effect */
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .service-card {
+    width: calc(50% - 40px); /* Two cards in a row for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    width: calc(100% - 40px); /* One card in a row for phones */
+  }
+}
+
+
+/* setsfide */
+

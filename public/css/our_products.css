@@ -12,12 +12,13 @@ body {
 .section-header {
   text-align: center;
   margin-bottom: 30px;
+  
 }
 
 .section-header h2 {
   font-size: 2.5rem;
   color: #333;
-  text-transform: uppercase;
+  text-transform:none;
   margin: 0;
   padding-bottom: 10px;
   border-bottom: 4px solid #d9a23e;
@@ -26,7 +27,7 @@ body {
 
 /* Our Products Section */
 .products-section {
-  padding: 100px 15px;
+  padding: 110px 15px;
   background-color: #f5f5f5;
 }
 
@@ -35,7 +36,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 70px;
 }
 
 /* Product Item */
@@ -43,7 +44,7 @@ body {
   display: flex;
   align-items: center;
   width: 75%;
-  padding: 100px;
+  padding: 150px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -69,7 +70,9 @@ body {
   background-position: center;
   border-radius: 8px;
   margin: 0 20px;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
+
 
 /* Product Info */
 .product-info {
@@ -91,6 +94,7 @@ body {
   margin-bottom: 15px;
 }
 
+
 .product-info h4 {
   font-size: 1rem;
   font-weight: bold;
@@ -103,6 +107,9 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+.card{
+  width: 1000px;
 }
 
 .functionalities-list li {
@@ -133,29 +140,68 @@ body {
   transform: translateY(0);
 }
 
-
-
+/* Mobile Responsive */
 @media (max-width: 768px) {
-   .product-image {
-    display: none;
+  .product-image {
+    width: 100%; /* Make the image full width on mobile */
+    height: 200px; /* Adjust height as needed */
+    margin: 0;
+    border-radius: 8px;
+    transform: scale(1.05); /* Add a slight zoom effect */
   }
 
   .product-item {
-    flex-direction: column;
-    text-align: center;
-  }
-  .product-info {
-    padding: 10px;
+    padding: 50px 15px; /* Adjust padding for mobile */
   }
 
   .product-item h3 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Smaller heading */
   }
 
   .product-item p {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller paragraph text */
   }
-  .section-header{
-    padding-top: 250px;
+
+  .section-header {
+    padding-top: 50px;
+  }
+
+  .product-info p {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+    text-align: center; /* Center text */
+  }
+
+  .product-info h4 {
+    font-size: 0.9rem; /* Adjust heading size */
+  }
+
+  .functionalities-list li {
+    font-size: 0.9rem; /* Adjust functionalities list item size */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 2rem; /* Adjust section header size for smaller screens */
+  }
+
+  .product-item h3 {
+    font-size: 1.3rem; /* Further adjust heading size for smaller screens */
+  }
+
+  .product-item p {
+    font-size: 0.9rem; /* Further adjust paragraph size */
+  }
+
+  .product-info h4 {
+    font-size: 0.8rem; /* Further adjust functionalities heading size */
+  }
+
+  .functionalities-list li {
+    font-size: 0.8rem; /* Further adjust functionalities list item size */
+
+  }
+  .product-image{
+    display: none;
   }
 }

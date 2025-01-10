@@ -9,6 +9,35 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   };
 
+  const items = document.querySelectorAll('.carousel-item');
+ const titles = document.querySelectorAll('.title');
+ const descriptions = document.querySelectorAll('.description');
+ let currentIndex = 0;
+
+ function showNextItem() {
+     items[currentIndex].classList.remove('active');
+     titles[currentIndex].classList.remove('show');
+     descriptions[currentIndex].classList.remove('show');
+
+     currentIndex = (currentIndex + 1) % items.length;
+     
+     items[currentIndex].classList.add('active');
+     
+     // Delay the text animations
+     setTimeout(() => {
+         titles[currentIndex].classList.add('show');
+     }, 300); // Title animation delay
+     
+     setTimeout(() => {
+         descriptions[currentIndex].classList.add('show');
+     }, 500); // Description animation delay
+ }
+
+ setInterval(showNextItem, 3000); // Change image every 3 seconds
+
+ // Initial animation for the first item
+ titles[currentIndex].classList.add('show');
+ descriptions[currentIndex].classList.add('show');
 
 
   // Function to handle the intersection of the mission section

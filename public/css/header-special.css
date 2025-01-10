@@ -1,7 +1,6 @@
 /* General Header Styling */
 
 header {
-  background-color: none; /* Lighter background color */
   padding: 10px 20px;
   color: #111;
   text-align: center;
@@ -12,7 +11,8 @@ header {
   margin: 0 20px;
   z-index: 10;
   border-radius: 8px;
-  background-color: aliceblue;
+  background-Color: rgba(255, 255, 255, 0.8);
+  backdrop-Filter: blur(10px) ;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 

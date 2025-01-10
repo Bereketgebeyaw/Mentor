@@ -2,6 +2,7 @@
 .testimonial-section {
   padding: 85px 20px;
   background-color: #fff;
+  margin-top: 1rem;
 }
 
 .testimonial-cards {
@@ -102,5 +103,5 @@
 }
 @media (max-width: 768px) {
    .testimonial-section {
-    padding-top: 270px;
+    padding-top: 100px;
   }}

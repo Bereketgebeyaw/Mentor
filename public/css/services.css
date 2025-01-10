@@ -4,12 +4,13 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
+  overflow-x: hidden;
+
 }
 
 main {
   padding: 50px 20px;
 }
-
 
 .cta-button {
   display: inline-block;
@@ -23,7 +24,6 @@ main {
   border-radius: 8px; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
   transition: all 0.3s ease;
-  
 }
 
 .cta-button:hover {
@@ -32,38 +32,43 @@ main {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
   transform: scale(1.05); 
 }
-.button-cta{
-  padding-left: 1000px;
+
+.button-cta {
+  display: flex; /* Use flex to center the button */
+  justify-content: center; /* Center the button horizontally */
+  margin: 20px 0; /* Add top and bottom margins for spacing */
 }
 
 .our-technology {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    height: 80%;
-    background-image: url('/images/service-background.jpg')
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  height: 80%;
+  background-image: url('/images/service-background.jpg');
+  margin-top: 1rem;
 }
 
 .grid-pattern {
-    flex: 0 0 45%; 
-    height: 100%; 
-    background-size: contain; 
-    background-position: center; 
-    background-repeat: no-repeat; 
+  flex: 0 0 45%; 
+  height: 100%; 
+  background-size: contain; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
-
 .content {
-    flex: 1; 
-    padding: 0 20px;
+  flex: 1; 
+  padding: 0 20px;
+  margin-top: 2rem;
 }
 
 .content h1 {
-    font-size: 3rem;
-    color: #333; 
-    margin-bottom: 20px;
+  font-size: 3rem;
+  color: #333; 
+  margin-bottom: 20px;
 }
+
 .content h1::after {
   content: "";
   width: 250px;
@@ -72,119 +77,149 @@ main {
   display: block;
   margin: 5px;
 }
+
 .content p {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 500px; 
-    line-height: 1.8;}
-
-
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 500px; 
+  line-height: 1.8;
+}
 
 .sec-header {
-    text-align: center;
-    padding: 100px;
-    background-color: #f4f4f4;
-    border-bottom: 1px solid #ddd;
-     opacity: 0; 
-    transform: translateY(100px); 
-    transition: opacity 0.8s ease, transform 0.8s ease; 
-    will-change: opacity, transform;
+  text-align: center;
+  padding: 100px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  opacity: 0; 
+  transform: translateY(100px); 
+  transition: opacity 0.8s ease, transform 0.8s ease; 
+  will-change: opacity, transform;
 }
 
 .sec-header h1 {
-    margin: 0;
-    font-size: 2rem;
-    color: #111;
+  margin: 0;
+  font-size: 2rem;
+  color: #111;
 }
 
 .sec-header p {
-    margin: 10px 0 0;
-    font-size: 1.1rem;
-    color: #555;
+  margin: 10px 0 0;
+  font-size: 1.1rem;
+  color: #555;
 }
 
 .cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    margin-bottom: 40px;
-   
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 40px;
 }
 
 .card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 20px;
-    text-align: center;
-     opacity: 0; 
-    transform: translateY(100px); 
-    transition: opacity 0.8s ease, transform 0.8s ease; 
-    will-change: opacity, transform;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  opacity: 0; 
+  transform: translateY(100px); 
+  transition: opacity 0.8s ease, transform 0.8s ease; 
+  will-change: opacity, transform;
 }
 
 .card .icon {
-    height: 50px;
-    width: 50px;
-    margin: 0 auto 10px;
+  height: 50px;
+  width: 50px;
+  margin: 0 auto 10px;
 }
-
 
 .card p {
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 20px;
-   
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
 }
-
 
 .card.show {
   opacity: 1; 
   transform: translateY(0); 
 }
+
 .sec-header.show {
   opacity: 1; 
   transform: translateY(0);
 }
 
 .black-icons svg {
-    fill: black; 
-    stroke: black; 
+  fill: black; 
+  stroke: black; 
 }
+
+/* Responsive Styles */
 @media (max-width: 1081px) {
   .our-technology {
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-    background-image: none;
-    padding-top: 250px;
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+      background-image: none;
+      padding-top: 110px;
   }
-.content h1::after {
- 
-  display: none;
-  
+
+  .button-cta {
+      margin-left: 0; /* Adjust margin for better alignment */
+  }
+
+  .content h1::after {
+      display: none;
+  }
 }
-}
+
 @media (max-width: 768px) {
   .our-technology {
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-    background-image: none;
+      padding: 30px;
+      margin-top: 3rem;
   }
 
-  
+  .content h1 {
+      font-size: 2.5rem; /* Increase responsiveness */
+      color: #d9a23e;
+  }
 
   .cards-container {
-    flex-wrap: wrap;
-    gap: 10px;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 1rem;
+  }
+
+  .sec-header h1 {
+      color: #d9a23e;
+  }
+
+  .sec-header {
+      width: 90%; /* Responsive width */
+      margin: 0 auto; /* Center alignment */
+      text-align: center;
+      padding: 50px 20px; /* Adjust padding */
   }
 
   .card {
-    width: 100%; /* Each card takes full width */
+      width: calc(50% - 20px); /* Two cards per row on smaller screens */
+      margin: 10px; /* Add margin for spacing */
+  }
+
+  @media (max-width: 480px) {
+      .card {
+          width: 100%; /* Full width on very small screens */
+      }
+
+      .content h1 {
+          font-size: 2rem; /* Decrease font size */
+      }
+
+      .sec-header {
+          padding: 30px 10px; /* Adjust padding for smaller screens */
+      }
   }
 }
-
