@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="/css/about.css" />
   <script src="/js/scripts.js"></script>
   <link rel="stylesheet" href="/css/chat-popup.css"> <!-- Link to portfolio CSS -->
-  <%- include('partials/header-special') %>
+  <%- include('partials/header') %>
   <main>
     <!-- About Us Section with Image -->
     <section id="about" class="section1">
@@ -27,21 +27,89 @@
     </div>
 </section>
 
+
 <section class="mission">
-  <section id="mission" class="section2 center-aligned">
-    <h2 id="missionTitle" class="missionTitle">Our Mission</h2>
-    <ul id="missionList">
-        <li class="list-mision" >Provide proactive and responsive IT and management consulting services that help small and medium enterprises become stronger.</li>
-        <li class="list-mision" >Offer custom application development services for both enterprise and consumer apps based on business process management concepts.</li>
-        <li class="list-mision" >Provide technology-enabled back-office and front-office business services with sourcing arrangement.</li>
-        <li class="list-mision" >Create a platform strategy to attract top talent, and foster innovation and creativity in the workplace to retain them.</li>
-        <li class="list-mision" >Provide tailored professional development and executive education to improve the skillsets, knowledge, and competencies of business executives and IT professionals.</li>
-        <li class="list-mision"  >Foster entrepreneurship and business incubation.</li>
-        <li class="list-mision" >Deliver real value to shareholders through consistent growth and profitability.</li>
-    </ul>
+  <h1 class="our_mission">Our mission</h1>
+
+  <div class="slider-container">
+    <img src="images/mision.png" alt="Slider Image" class="slider-image" />
+    <!-- Image placed outside the slide -->
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <span class="icon">💼</span>
+          <h2>Empowerment Solutions</h2>
+          <ul>
+            <li>
+              Provide proactive and responsive IT and management consulting
+              services that help small and medium enterprises become
+              stronger.
+            </li>
+          </ul>
+        </div>
+        <div class="slide">
+          <span class="icon">📱</span>
+          <h2>App Innovation</h2>
+          <ul>
+            <li>
+              Offer custom application development services for both
+              enterprise and consumer apps based on business process
+              management concepts.
+            </li>
+          </ul>
+        </div>
+        <div class="slide">
+          <span class="icon">⚙️</span>
+          <h2>Service Optimization</h2>
+          <ul>
+            <li>
+              Provide technology-enabled back-office and front-office
+              business services with sourcing arrangement.
+            </li>
+          </ul>
+        </div>
+        <div class="slide">
+          <span class="icon">🌟</span>
+          <h2>Talent Strategy</h2>
+          <ul>
+            <li>
+              Create a platform strategy to attract top talent, and foster
+              innovation and creativity in the workplace to retain them.
+            </li>
+          </ul>
+        </div>
+        <div class="slide">
+          <span class="icon">📈</span>
+          <h2>Executive Development</h2>
+          <ul>
+            <li>
+              Provide tailored professional development and executive
+              education to improve the skillsets, knowledge, and
+              competencies of business executives and IT professionals.
+            </li>
+          </ul>
+        </div>
+        <div class="slide">
+          <span class="icon">🚀</span>
+          <h2>Startup Incubation</h2>
+          <ul>
+            <li>Foster entrepreneurship and business incubation.</li>
+          </ul>
+        </div>
+        <div class="slide">
+          <span class="icon">💰</span>
+          <h2>Value Creation</h2>
+          <ul>
+            <li>
+              Deliver real value to shareholders through consistent growth
+              and profitability.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-   </section>
-   
    
 
 <section class="value">
@@ -63,38 +131,6 @@
 </section>
 </section>
 
-
-
-<script>
-  // Function to show elements with delay
-  const missionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-      if (entry.isIntersecting) {
-          const missionSection = document.getElementById('mission');
-          missionSection.style.visibility = 'visible'; // Make section visible
-          missionSection.style.opacity = '1'; // Fade in
-
-          // Animate title
-          const title = document.querySelector('#mission h2');
-          title.style.opacity = 1;
-          title.style.transform = 'translateY(0)';
-
-          // Animate each list item with a staggered delay
-          const listItems = document.querySelectorAll('#missionList li');
-          listItems.forEach((item, index) => {
-              setTimeout(() => {
-                  item.classList.add('visible'); // Trigger animation
-              }, (index + 1) * 1000); // Increase delay for each item
-          });
-
-          missionObserver.unobserve(entry.target); // Stop observing after it has appeared
-      }
-  });
-});
-
-// Observe the mission section
-missionObserver.observe(document.getElementById('mission'));
-</script>
 
 
 
@@ -124,6 +160,80 @@ missionObserver.observe(document.getElementById('mission'));
  // Observe the vision section
  visionObserver.observe(document.getElementById('vision'));
  </script>
+
+ 
+<script>
+  // Function to show elements with delay
+  const missionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const missionSection = document.getElementById("mission");
+        missionSection.style.visibility = "visible"; // Make section visible
+        missionSection.style.opacity = "1"; // Fade in
+
+        // Animate title
+        const title = document.querySelector("#mission h2");
+        title.style.opacity = 1;
+        title.style.transform = "translateY(0)";
+
+        // Animate each list item with a staggered delay
+        const listItems = document.querySelectorAll("#missionList li");
+        listItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add("visible"); // Trigger animation
+          }, (index + 1) * 1000); // Increase delay for each item
+        });
+
+        missionObserver.unobserve(entry.target); // Stop observing after it has appeared
+      }
+    });
+  });
+
+  // Observe the mission section
+  missionObserver.observe(document.getElementById("mission"));
+</script>
+<script>
+  let currentIndex = 0;
+  let slideInterval;
+
+  function showNextSlide() {
+    const slides = document.querySelector(".slides");
+    const totalSlides = document.querySelectorAll(".slide").length;
+    currentIndex = (currentIndex + 1) % totalSlides;
+
+    // Reset slides for animation
+    const allSlides = document.querySelectorAll(".slide");
+    allSlides.forEach((slide, index) => {
+      slide.style.opacity = index === currentIndex ? "0" : "1";
+      slide.style.transform =
+        index === currentIndex ? "translateY(-20px)" : "translateY(0)";
+    });
+
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    // Trigger animation for the current slide
+    const currentSlide = allSlides[currentIndex];
+    currentSlide.style.opacity = "1";
+    currentSlide.style.transform = "translateY(0)";
+  }
+
+  function startSlideShow() {
+    slideInterval = setInterval(showNextSlide, 3000);
+  }
+
+  function stopSlideShow() {
+    clearInterval(slideInterval);
+  }
+
+  document
+    .querySelector(".slider")
+    .addEventListener("mouseenter", stopSlideShow);
+  document
+    .querySelector(".slider")
+    .addEventListener("mouseleave", startSlideShow);
+
+  startSlideShow(); // Start the slideshow initially
+</script>
 
   </main>
   <%- include('partials/footer') %>

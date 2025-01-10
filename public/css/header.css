@@ -1,33 +1,29 @@
-/* General Header Styling */
 
+/* General Header Styling */
 header {
-  background-color: none; /* Lighter background color */
+  background-color: #EAE3EA; /* Softer dark background matching footer */
   padding: 10px 20px;
-  color: #111;
+  color: goldenrod; /* Softer gray text */
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100% - 40px); /* Adjust width for padding */
+  width: calc(100% - 40px);
   margin: 0 20px;
   z-index: 10;
   border-radius: 8px;
-  
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-
 
 /* Header Container */
 .header-container {
   display: flex;
-  justify-content: space-between; /* Spread out the logo and hamburger */
+  justify-content: space-between;
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
-  padding: 0 10px; /* Add padding for better spacing */
-  width: 100%; /* Ensure full width */
+  padding: 0 20px;
+  width: 100%;
 }
 
 /* Logo Styling */
@@ -37,151 +33,140 @@ header {
 }
 
 .logo-img {
-  height: 70px; /* Larger logo size */
-  width: auto;
+  height: 100px; /* Larger logo for desktop view */
+  width: auto; /* Maintain aspect ratio */
   margin-right: 10px;
 }
 
 .logo-text {
-  font-size: 1.5rem; /* Slightly larger text size */
-  color: #111;
+  font-size: 1.8rem;
+  color: goldenrod;
   font-weight: bold;
 }
 
 /* Navigation Links */
-.nav-links {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 35px; /* Add space between links */
-  align-items: center;
-  margin-left: auto; /* Align nav links to the right */
+.topnav {
+  overflow: hidden;
+  background-color: #EAE3EA;
 }
-.nav-links a:hover {
+
+.topnav a {
+  float: left;
+  display: block;
   color: goldenrod;
-}
-
-.nav-links li {
-  position: relative;
-}
-
-.nav-links a {
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  color: #111;
-  font-size: 0.8rem;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-  
+  font-size: 17px;
 }
 
-.nav-links a:hover {
+.topnav a:hover, .dropdown:hover .dropbtn {
   color: goldenrod;
 }
 
-/* Active Link Styling */
-.nav-links a:hover {
-  color: #d9a23e; /* Highlight color */
-  font-weight: bold;
-}
-.nav-links  a:is(:link , :active , :visited).active{
-    color: #d9a23e;
+.active {
+  color: goldenrod;
 }
 
-/* Hamburger Icon Styling */
-.hamburger {
-  display: none; /* Hide by default */
-  font-size: 2rem;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
 
-/* Hamburger Fancy Effect */
-.hamburger:hover {
-  transform: rotate(90deg); /* Rotate on hover */
-  color: #d9a23e;
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: goldenrod;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-  /* Stack logo and navigation links vertically */
-  .header-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-links {
-    display: none; /* Hide navigation links by default */
-    flex-direction: column; /* Stack navigation links vertically */
-    align-items: flex-start; /* Align links to the left */
-    width: 100%; /* Full width for the nav menu */
-    margin-top: 10px;
-    gap: 10px; /* Space between links */
-    position: absolute;
-    top: 100%; /* Position links directly below the header */
-    left: 0; /* Align to the left */
-  }
-
-  .nav-links.active {
-    display: flex; /* Show navigation links when active */
-  }
-
-  .hamburger {
-    display: block; /* Show hamburger icon on smaller screens */
-    z-index: 20; /* Ensure it's above other elements */
-  }
-}
-/* drop down */
-
-.nav-dropdown li {
-  display: inline-block;
-  position: relative;
-  
-}
-.nav-dropdown li ul.dropdown li  {
-  display: block;
-  padding: 4px 5px;
-  
-
-  
-}
-.nav-dropdown li ul.dropdown li {
-  display: block;
-  max-width: 300px;
-}
-.nav-dropdown li:hover ul.dropdown {
-  display: block;
-}
-.nav-dropdown li ul.dropdown {
-  width: 100%;
-
-  background: whitesmoke;
-  position: absolute;
+.dropdown-content {
   display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: goldenrod;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
   text-align: left;
 }
-.nav-dropdown li ul.dropdown li a {
-  color: black;
-}
-.nav-dropdown li ul.dropdown li a:hover {
-  color:goldenrod;
-  
+
+.dropdown-content a:hover {
+  color: goldenrod;
 }
 
-@media screen and (max-width: 480px) {
-  /* Smaller logo and text for very small screens */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Mobile Responsive Styling */
+@media screen and (max-width: 600px) {
+  header {
+    padding: 10px; /* Reduce padding for smaller screens */
+    width: calc(100% - 20px);
+    margin: 0 10px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to start for better stacking */
+    padding: 0 10px;
+  }
+
   .logo-img {
-    height: 30px; /* Adjust logo size */
+    height: 50px; /* Smaller logo for mobile */
+    margin-right: 5px;
   }
 
   .logo-text {
-    font-size: 1rem; /* Adjust text size */
+    font-size: 1.2rem; /* Smaller text size */
   }
 
-  .nav-links a {
-    font-size: 0.7rem; /* Reduce link font size */
-    
+  .topnav a {
+    display: none; /* Hide links by default on mobile */
   }
-  
+
+  .topnav .icon {
+    float: right;
+    display: block; /* Show menu icon */
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .topnav.responsive {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .topnav.responsive a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .dropdown-content {
+    position: relative; /* Adjust dropdown for stacking */
+    min-width: 100%; /* Full width for dropdowns */
+    box-shadow: none; /* Remove shadow for cleaner mobile look */
+  }
+
+  .dropdown .dropbtn {
+    width: 100%; /* Full width dropdown button */
+    text-align: left;
+  }
 }
+
